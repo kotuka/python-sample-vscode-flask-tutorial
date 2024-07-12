@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kotukapythonsamplevscodeflasktutorial 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kotukapythonsamplevscodeflasktutorial
+  template:
+    metadata:
+      labels:
+        app: kotukapythonsamplevscodeflasktutorial 
+    spec:
+      containers:
+        - name: kotukapythonsamplevscodeflasktutorial 
+          image: acrlearning001701.azurecr.io/kotukapythonsamplevscodeflasktutorial
+          ports:
+          - containerPort: 5000
